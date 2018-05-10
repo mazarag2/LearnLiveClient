@@ -1,0 +1,19 @@
+{
+  "name": "learnliveclient",
+  "version": "1.0.0",
+  "description": "Vue front end app for learnliveservices\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D-services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazarag2/LearnLiveClient.git"
+  },
+  "author": "Mike Zaragoza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mazarag2/LearnLiveClient/issues"
+  },
+  "homepage": "https://github.com/mazarag2/LearnLiveClient#readme"
+}
