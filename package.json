@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mazarag2/LearnLiveClient/issues"
   },
-  "homepage": "https://github.com/mazarag2/LearnLiveClient#readme"
+  "homepage": "https://github.com/mazarag2/LearnLiveClient#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
