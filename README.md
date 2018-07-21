@@ -1,2 +1,18 @@
-# isitLikeDarkSouls
-Satirical Vue front end app which determines wether a game is like Dark Souls or not.Inspired my the many gaming articles that mention souls or bloodborne when a game has similair mechanics .
+# ititlikedarksouls
+
+> satirical vue app inspired by the countless mentions of dark souls in gaming articles 
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

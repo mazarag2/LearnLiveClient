@@ -1,34 +1,24 @@
-
-var response = new Vue({
-	
-	el: '#DisplayResponse',
-	data: {
-		response: 'IsitLikeDarkSouls well see..'
-	}
+import Vue from 'vue'
+import App from './App.vue'
+//import axios from 'axios'
+const app = new Vue({
+  el: '#app',
+  render: h => h(App),
+  components: { App }
 })
-
-new Vue({
-	
-	el: '#gameName',	
-	methods:{
-		
-		sendGameName: function(){
-			
-			
-			
-			/*
-			  mounted () {
-				axios
-				  .get('https://api-endpoint.igdb.com/games/')
-				  .then(response => (this.info = response))
-			  }
-			  */
-			//send msg to API
-			
-			
-		}
-	}
-	
-	
-	
-})
+/*
+window.onload = function () {
+	new Vue({
+	  el: '#submitGameForm',
+	  methods:{
+		  
+		  sendGameName : function(event){
+			  
+			  
+			  
+			  
+			  
+		  }
+	  }
+	})
+}*/
