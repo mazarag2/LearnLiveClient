@@ -44,7 +44,6 @@ export default {
 			
 			axios.get(url, {
 				headers: {
-				  "user-key": "cbbad2bf9cf0dfd5b17311a1171202c0",
 				  "Access-Control-Allow-Origin":"origin",
 				   Accept: "application/json"
 				}
