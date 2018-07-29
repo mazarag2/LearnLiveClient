@@ -40,17 +40,18 @@ export default {
 
 			console.log(this.gameName);
 			
-			var url = 'https://api-endpoint.igdb.com/games' + qp;
+			var url = 'http://localhost:8081/games/' + this.gameName;
 			
-			axios.get(url, {
-				headers: {
-				  "user-key": "cbbad2bf9cf0dfd5b17311a1171202c0",
-				  "Access-Control-Allow-Origin":"origin",
-				   Accept: "application/json"
+			axios.get(url,{
+			
+				headers:{
+					Accept: "text/html",
+					"Access-Control-Allow-Origin": "http://localhost:8081"
 				}
-			})
+			}
+			)
 			.then(response => {
-				this.response = response;
+				this.response = response.data;
 			})
 			.catch(e => {
 				console.log("error", e);
