@@ -1,4 +1,4 @@
-# ititlikedarksouls
+# isitlikedarksouls
 
 > satirical vue app inspired by the countless mentions of dark souls in gaming articles 
 
