@@ -3,12 +3,12 @@
 	<h1 class = "display-4">isitLikeDarkSouls ? Enter the name of a game to find out how similiar it is to Dark Souls</h1>
 	<br>
 	<form class = "d-flex justify-content-center" id="submitGameForm" @submit.prevent="sendGameName">
-	<p>
-		<label>Enter Game Name</label>
-		<br></br>
-		<input type="text" v-model="gameName" placeholder="Search">
-		<button type="button" class="btn btn-outline-primary">Search</button>
-	</p>
+		<p>
+			<label>Enter Game Name</label>
+			<br></br>
+			<input type="text" v-model="gameName" placeholder="Search">
+			<button type="button" class="btn btn-outline-primary" v-on:click="sendGameName()">Search</button>
+		</p>
 	</form>
 	<br>
 	<div class = "d-flex justify-content-center" id = "DisplayResponse">
@@ -22,9 +22,9 @@
 import axios from 'axios'
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue);
 export default {
 
 	data(){
@@ -37,7 +37,7 @@ export default {
 	},
 	methods:{
 	
-		sendGameName(event){
+		sendGameName(){
 		
 			
 			var qp = '?search=' + this.gameName + '&fields=*';
