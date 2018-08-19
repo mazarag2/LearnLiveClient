@@ -43,8 +43,6 @@ export default {
 		sendGameName(){
 		
 			
-			var qp = '?search=' + this.gameName + '&fields=*';
-
 			console.log(this.gameName);
 			
 			var url = process.env.VUE_APP_PROD_URL + '/games/' + this.gameName;
