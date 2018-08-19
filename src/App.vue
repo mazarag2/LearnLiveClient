@@ -1,5 +1,6 @@
 <template>
-<div class = "jumbotron">
+<body>
+<div id = "app" class = "jumbotron">
 	<h1 class = "display-4">isitLikeDarkSouls ? Enter the name of a game to find out how similiar it is to Dark Souls</h1>
 	<br>
 	<form class = "d-flex justify-content-center" id="submitGameForm" @submit.prevent="sendGameName">
@@ -16,6 +17,7 @@
 	</div>
 
 </div>
+</body>
 </template>
 
 <script defer>
@@ -25,6 +27,7 @@ import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default {
 
 	data(){
@@ -44,7 +47,9 @@ export default {
 
 			console.log(this.gameName);
 			
-			var url = 'http://localhost:8081/games/' + this.gameName;
+			var url = process.env.VUE_APP_PROD_URL + '/games/' + this.gameName;
+			
+			console.log(url);
 			
 			axios.get(url,{
 			
@@ -70,6 +75,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -77,20 +83,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  
 }
 
 h1, h2 {
   font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 a {

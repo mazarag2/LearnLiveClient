@@ -1,7 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
-
+const Dotenv = require('dotenv-webpack');
 module.exports = {
+  node: {
+	fs: 'empty'
+  },
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -50,6 +53,9 @@ module.exports = {
     noInfo: true,
     overlay: true
   },
+  plugins:[
+	new Dotenv()
+  ],
   performance: {
     hints: false
   },
