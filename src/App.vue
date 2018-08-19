@@ -43,9 +43,12 @@ export default {
 		sendGameName(){
 		
 			
-			console.log(this.gameName);
 			
-			var url = process.env.VUE_APP_PROD_URL + '/games/' + this.gameName;
+
+			console.log(this.gameName);
+
+			
+			var url = 'https://secret-eyrie-84194.herokuapp.com' + '/games/' + this.gameName;
 			
 			console.log(url);
 			
